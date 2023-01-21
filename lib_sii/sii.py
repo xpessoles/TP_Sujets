@@ -6,6 +6,7 @@ Created on Sat Jan 21 15:14:58 2023
 """
 
 import numpy as np
+import matplotlib.pyplot as plt
 
 def trapeze_vitesse(xi:float, xf:float, vmax:float, amax:float, dt:float) -> np.ndarray :
     """
@@ -39,9 +40,49 @@ def trapeze_vitesse(xi:float, xf:float, vmax:float, amax:float, dt:float) -> np.
     if abs(xf - xi) < dmini : 
         # On calcule la vitesse atteignable:
         vmax = (abs(xf - xi)*amax)**.5
-        
-        
-    deltax = xf - xi
+        ta = vmax / amax
+        T = 0
+    else : 
+        ta = vmax / amax
+        # Calcul du temps à vitesse constante: 
+        D = abs(xf - xi)
+        # Aire sous la courbe de vitesse: D = vmax*ta + T*vmax
+        T = (D - vmax*ta)/vmax
     
-    10 > 1
+    t = 0
+    les_t,les_x,les_v,les_a = [],[],[],[]
+    if xi>xf :
+        amax = -amax
+        vmax = -vmax
+    while t <= 2*ta+T+100*dt:
+        if t < ta :
+            les_t.append(t)
+            les_a.append(amax)
+            les_v.append(amax*t)
+            les_x.append(0.5*amax*t*t)
+        elif t< ta+T :
+            les_t.append(t)
+            les_a.append(0)
+            les_v.append(vmax)
+            les_x.append(les_x[-1]+vmax*dt)
+        elif t < 2*ta+T : 
+            les_t.append(t)
+            les_a.append(-amax)
+            les_v.append(les_v[-1]-amax*dt)
+            les_x.append(les_x[-1]+les_v[-1]*dt)
+        else : 
+            les_t.append(t)
+            les_a.append(0)
+            les_v.append(0)
+            les_x.append(les_x[-1])
+        t=t+dt
+    return les_t, les_x, les_v, les_a
+
+def test_trapeze():
+    les_t, les_x, les_v, les_a = trapeze_vitesse(0, -100, 0.5*100, 5*100, 0.001)
+    plt.plot(les_t,les_a)
+    plt.plot(les_t,les_v)
+    plt.plot(les_t,les_x)
+    plt.grid()
+    plt.show()
     
