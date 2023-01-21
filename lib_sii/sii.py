@@ -54,7 +54,8 @@ def trapeze_vitesse(xi:float, xf:float, vmax:float, amax:float, dt:float) -> np.
     if xi>xf :
         amax = -amax
         vmax = -vmax
-    while t <= 2*ta+T+100*dt:
+    
+    while t <= 2*ta+T+100*dt: # On simule sur n*dt de plus que la durée du mouvement
         if t < ta :
             les_t.append(t)
             les_a.append(amax)
@@ -78,6 +79,38 @@ def trapeze_vitesse(xi:float, xf:float, vmax:float, amax:float, dt:float) -> np.
         t=t+dt
     return les_t, les_x, les_v, les_a
 
+def read_from_tracker(file:str) :
+    """
+    Parsing des données provenant du logiciel de pointage Tracker sur 3 colonnes :
+    temps,abscisse,ordonnée
+    On supprime les deux premières lignes qui contiennent des informations sur les colonnes.
+    On supprime les mesures qui ont échouées lors du tracking.
+
+
+    Parameters
+    ----------
+    file : str
+        nom du fichier texte (et lien).
+
+    Returns
+    -------
+    (list,list,list)
+        Valeurs expérimentales : les_temps, les_x, les_y
+
+    """
+    fid = open(file,"r")  
+    data = fid.readlines()
+    fid.close()
+    data = data[2:]
+    les_t_exp, les_x_exp, les_y_exp = [],[],[]
+    for ligne in data[:-1] : 
+        l = ligne.split("\t")
+        if len(l[0])>4 and len(l[1])>4 and len(l[2])>4 :
+            les_t_exp.append(float(l[0].replace(",",'.')))
+            les_x_exp.append(float(l[1].replace(",",'.')))
+            les_y_exp.append(float(l[2].replace(",",'.')))
+    return les_t_exp, les_x_exp, les_y_exp
+    
 def test_trapeze():
     les_t, les_x, les_v, les_a = trapeze_vitesse(0, -100, 0.5*100, 5*100, 0.001)
     plt.plot(les_t,les_a)
@@ -86,3 +119,5 @@ def test_trapeze():
     plt.grid()
     plt.show()
     
+
+
