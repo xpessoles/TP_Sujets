@@ -59,11 +59,13 @@ def plot_4_mesures(HG:str,HD:str,BG:str,BD:str):
     les_index_hd,les_t_hd,les_c1_hd,les_c2_hd,les_c3_hd,les_c4_hd,les_col_hd = read_from_rc4(HD)
     les_index_bg,les_t_bg,les_c1_bg,les_c2_bg,les_c3_bg,les_c4_bg,les_col_bg = read_from_rc4(BG)
     les_index_bd,les_t_bd,les_c1_bd,les_c2_bd,les_c3_bd,les_c4_bd,les_col_bd = read_from_rc4(BD)
+    
 file_hg = "RC4/01_HG.csv"
 file_hd = "RC4/01_HD.csv"
 file_bg = "RC4/01_BG.csv"
 file_bd = "RC4/01_BD.csv"
     
+# - Résolution Enrouleur : 52 qc (points codeur) pour 1 mm de câble.
 #plot_file(file_hg)
 
 
