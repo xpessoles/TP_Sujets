@@ -19,7 +19,7 @@ def trapeze_vitesse(xi:float, xf:float, vmax:float, amax:float, dt:float) -> np.
     vmax : float
         vitesse maximale atteignable (m/s, mm/s ou rad/s).
     amax : float
-        accélérationmaximale atteignable (m/s², mm/s² ou rad/s²).
+        accélération maximale atteignable (m/s², mm/s² ou rad/s²).
     dt : float
         incrément de temps en s.
     Returns
@@ -119,5 +119,3 @@ def test_trapeze():
     plt.grid()
     plt.show()
     
-
-
