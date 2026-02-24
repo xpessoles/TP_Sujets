@@ -26,21 +26,11 @@ void setup() {
   Serial.begin(9600); 
 }
 
-
 void loop() {
-
-  for (int t=0; t<255; t++)
-   {
      angle = (float) cpt;
      angle = angle *360./48./34.;
      Serial.print(angle);Serial.print(",");Serial.print(angle);Serial.println();
      moteur(100);
-     //moteur(100);
-     delay(1);
-   }
-
-
-   
   }
 
 void moteur(float x){
@@ -66,7 +56,6 @@ void codeurA(){
     cpt--;
   }
 }
-
 
 void codeurB(){
   int a = digitalRead(VOIE_A);
