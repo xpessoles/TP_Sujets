@@ -6,11 +6,17 @@
  - [] 05 ControlX
  - [] 06 Cordeuse
  - [] 07 DAE
- - [] 11 Maxpid
+ - [x] 11 Maxpid
+    - TP type ccp
+	- Cin
+	- Energétique
  - [x] 11 MaxPID E
+	- Cin
+	- Energétique
+	- SLCI
  - [] 13 Moby Crea
  - [] 14 Pilote Automatique
  - [] 16 RC4 
- - [] 19 Sympact
+ - [x] 19 Sympact >> Energétique
  - [] 22 I3D
 
