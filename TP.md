@@ -10,7 +10,7 @@
     - SLCI
 
  
- 04 - [] 03 Cheville NAO
+ 04 - [x] 03 Cheville NAO
     - SLCI
 
  
@@ -18,7 +18,7 @@
     - SLCI
 	
  
- 06 - [] 05 ControlX   >>   xxx  
+ 06 - [x] 05 ControlX   >>   xxx  
     - SLCI
 	
  
