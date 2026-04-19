@@ -1,4 +1,4 @@
- 01 - [x] 01 BGR 300
+ 01 - [x] 01 BGR 300 - [1 SUJET]
     - SLCI
 
  
@@ -6,31 +6,27 @@
     - SLCI
 
  
- 03 - [x] 03 Cheville NAO
+ 03 - [x] 03 Cheville NAO [2 SUJETS]
     - SLCI
 
  
- 04 - [x] 03 Cheville NAO
-    - SLCI
-
- 
- 05 - [x] 04 CoMAX
+ 05 - [x] 04 CoMAX [2 SUJETS]
     - SLCI
 	
  
- 06 - [x] 05 ControlX   >>   xxx  
+ 06 - [x] 05 ControlX   [1 SUJET]
     - SLCI
 	
  
- 07 - [x] 06 Cordeuse
+ 07 - [x] 06 Cordeuse [1 SUJET]
     - TEC
  
  
- 08 - [x] 07 DAE
+ 08 - [x] 07 DAE [1 SUJET]
     - STAT
  
  
- 09 - [x] 11 Maxpid
+ 09 - [x] 11 Maxpid - [3 SUJETS]
     - SLCI TP type ccp
 	- Cin
 	- Energétique
