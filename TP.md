@@ -22,11 +22,11 @@
     - SLCI
 	
  
- 07 - [] 06 Cordeuse
+ 07 - [x] 06 Cordeuse
     - TEC
  
  
- 08 - [] 07 DAE
+ 08 - [x] 07 DAE
     - STAT
  
  
