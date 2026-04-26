@@ -2,7 +2,7 @@
     - SLCI
 
  
- 02 - [] 02 Bras Beta
+ 02 - [x] 02 Bras Beta
     - SLCI
 
  
