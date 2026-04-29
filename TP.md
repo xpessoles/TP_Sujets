@@ -5,7 +5,6 @@
     - SLCI
  	
  03 - [x] 03 Cheville NAO [2 SUJETS]
- 
  04 - SLCI
  
  05 - [x] 04 CoMAX [2 SUJETS]
@@ -30,7 +29,7 @@
 	- Énergétique
 	- SLCI
  
- 11 - [] 13 Moby Crea
+ 11 - [x] 13 Moby Crea
  	- Cin
 
  12 - [] 14 Pilote Automatique
