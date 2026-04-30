@@ -18,6 +18,9 @@
  
  08 - [x] 07 DAE [1 SUJET]
     - STAT
+
+ 09 - Drone D2C
+    - Cf Réseau Lycée
  
  09 - [x] 11 Maxpid - [3 SUJETS]
     - SLCI TP type ccp
